@@ -1,0 +1,34 @@
+HTTrack3.49-2 launched on Thu, 11 Jan 2024 17:57:11 at https://themesdesign.in/jobcy-tailwind/layout/index.html
+(httrack https://themesdesign.in/jobcy-tailwind/layout/index.html )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+18:00:21	Error: 	"Not Found" (404) at link https://themesdesign.in/jobcy-tailwind/layout/assets/images/logo/instagram.svg (from https://themesdesign.in/jobcy-tailwind/layout/index.html)
+18:00:21	Error: 	"Not Found" (404) at link https://themesdesign.in/jobcy-tailwind/layout/assets/fonts/fa-v4compatibility.woff2 (from https://themesdesign.in/jobcy-tailwind/layout/assets/css/icons.css)
+18:00:21	Error: 	"Not Found" (404) at link https://themesdesign.in/jobcy-tailwind/layout/assets/fonts/fa-v4compatibility.ttf (from https://themesdesign.in/jobcy-tailwind/layout/assets/css/icons.css)
+18:00:21	Error: 	"Not Found" (404) at link https://themesdesign.in/jobcy-tailwind/layout/assets/fonts/la-brands-400.eot (from https://themesdesign.in/jobcy-tailwind/layout/assets/css/icons.css)
+18:00:21	Error: 	"Not Found" (404) at link https://themesdesign.in/jobcy-tailwind/layout/assets/fonts/la-brands-400.eot? (from https://themesdesign.in/jobcy-tailwind/layout/assets/css/icons.css)
+18:00:21	Error: 	"Not Found" (404) at link https://themesdesign.in/jobcy-tailwind/layout/assets/fonts/la-brands-400.woff2 (from https://themesdesign.in/jobcy-tailwind/layout/assets/css/icons.css)
+18:00:21	Error: 	"Not Found" (404) at link https://themesdesign.in/jobcy-tailwind/layout/assets/fonts/la-brands-400.woff (from https://themesdesign.in/jobcy-tailwind/layout/assets/css/icons.css)
+18:00:21	Error: 	"Not Found" (404) at link https://themesdesign.in/jobcy-tailwind/layout/assets/fonts/la-brands-400.ttf (from https://themesdesign.in/jobcy-tailwind/layout/assets/css/icons.css)
+18:00:21	Error: 	"Not Found" (404) at link https://themesdesign.in/jobcy-tailwind/layout/assets/fonts/la-brands-400.svg (from https://themesdesign.in/jobcy-tailwind/layout/assets/css/icons.css)
+18:00:21	Error: 	"Not Found" (404) at link https://themesdesign.in/jobcy-tailwind/layout/assets/fonts/la-regular-400.eot (from https://themesdesign.in/jobcy-tailwind/layout/assets/css/icons.css)
+18:00:21	Error: 	"Not Found" (404) at link https://themesdesign.in/jobcy-tailwind/layout/assets/fonts/la-regular-400.eot? (from https://themesdesign.in/jobcy-tailwind/layout/assets/css/icons.css)
+18:00:21	Error: 	"Not Found" (404) at link https://themesdesign.in/jobcy-tailwind/layout/assets/fonts/la-regular-400.woff2 (from https://themesdesign.in/jobcy-tailwind/layout/assets/css/icons.css)
+18:00:21	Error: 	"Not Found" (404) at link https://themesdesign.in/jobcy-tailwind/layout/assets/fonts/la-regular-400.woff (from https://themesdesign.in/jobcy-tailwind/layout/assets/css/icons.css)
+18:00:21	Error: 	"Not Found" (404) at link https://themesdesign.in/jobcy-tailwind/layout/assets/fonts/la-regular-400.ttf (from https://themesdesign.in/jobcy-tailwind/layout/assets/css/icons.css)
+18:00:21	Error: 	"Not Found" (404) at link https://themesdesign.in/jobcy-tailwind/layout/assets/fonts/la-regular-400.svg (from https://themesdesign.in/jobcy-tailwind/layout/assets/css/icons.css)
+18:00:21	Error: 	"Not Found" (404) at link https://themesdesign.in/jobcy-tailwind/layout/assets/fonts/la-solid-900.eot (from https://themesdesign.in/jobcy-tailwind/layout/assets/css/icons.css)
+18:00:21	Error: 	"Not Found" (404) at link https://themesdesign.in/jobcy-tailwind/layout/assets/fonts/la-solid-900.eot? (from https://themesdesign.in/jobcy-tailwind/layout/assets/css/icons.css)
+18:00:21	Error: 	"Not Found" (404) at link https://themesdesign.in/jobcy-tailwind/layout/assets/fonts/la-solid-900.woff2 (from https://themesdesign.in/jobcy-tailwind/layout/assets/css/icons.css)
+18:00:21	Error: 	"Not Found" (404) at link https://themesdesign.in/jobcy-tailwind/layout/assets/fonts/la-solid-900.woff (from https://themesdesign.in/jobcy-tailwind/layout/assets/css/icons.css)
+18:00:21	Error: 	"Not Found" (404) at link https://themesdesign.in/jobcy-tailwind/layout/assets/fonts/la-solid-900.ttf (from https://themesdesign.in/jobcy-tailwind/layout/assets/css/icons.css)
+18:00:21	Error: 	"Not Found" (404) at link https://themesdesign.in/jobcy-tailwind/layout/assets/fonts/la-solid-900.svg (from https://themesdesign.in/jobcy-tailwind/layout/assets/css/icons.css)
+18:00:21	Error: 	"Not Found" (404) at link https://themesdesign.in/jobcy-tailwind/layout/manage-jobs-post.html (from https://themesdesign.in/jobcy-tailwind/layout/manage-jobs.html)
+18:00:21	Error: 	"Not Found" (404) at link https://themesdesign.in/jobcy-tailwind/layout/assets/images/dark-logo.png (from https://themesdesign.in/jobcy-tailwind/layout/profile.html)
+
+HTTrack Website Copier/3.49-2 mirror complete in 3 minutes 10 seconds : 187 links scanned, 163 files written (19424023 bytes overall) [14372504 bytes received at 75644 bytes/sec], 5748093 bytes transferred using HTTP compression in 64 files, ratio 11%, 17.0 requests per connection
+(23 errors, 0 warnings, 0 messages)
