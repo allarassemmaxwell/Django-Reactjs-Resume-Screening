@@ -28,6 +28,7 @@ SECRET_KEY = 'django-insecure-76%dvxqwn)v@5(y2amw2-dk8%tg99l3(p8e28adzzc18f&i7k4
 DEBUG = True
 
 ALLOWED_HOSTS = []
+AUTH_USER_MODEL = 'main_app.User'
 
 
 # Application definition
@@ -40,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'main_app',
+    'imagekit', # pip install django-imagekit
     'corsheaders',    # pip install django-cors-headers
     'rest_framework_simplejwt', # pip install djangorestframework-simplejwt
     'rest_framework', # pip install djangorestframework
