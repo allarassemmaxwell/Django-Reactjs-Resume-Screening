@@ -46,6 +46,8 @@ INSTALLED_APPS = [
     'rest_framework_simplejwt', # pip install djangorestframework-simplejwt
     'rest_framework', # pip install djangorestframework
     'preventconcurrentlogins', # pip install django-preventconcurrentlogins
+    'djmoney', # pip install django-money
+    'django_summernote', # pip install django-summernote
 ]
 
 MIDDLEWARE = [
@@ -171,12 +173,8 @@ CORS_ORIGIN_WHITELIST = (
     'http://localhost:3000',
 )
 
-RENDERER_CLASSES = (
-    'rest_framework.renderers.JSONRenderer',
-    'rest_framework_xml.renderers.XMLRenderer',
-)
+
 REST_FRAMEWORK = {
-    # 'DEFAULT_RENDERER_CLASSES': RENDERER_CLASSES,
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.AllowAny'
     ],
