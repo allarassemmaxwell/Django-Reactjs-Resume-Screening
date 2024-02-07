@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     'main_app',
     'imagekit', # pip install django-imagekit
     'corsheaders',    # pip install django-cors-headers
-    'rest_framework_simplejwt', # pip install djangorestframework-simplejwt
+    # 'rest_framework_simplejwt', # pip install djangorestframework-simplejwt
+    'rest_framework_simplejwt.token_blacklist',
     'rest_framework', # pip install djangorestframework
     'preventconcurrentlogins', # pip install django-preventconcurrentlogins
     'djmoney', # pip install django-money
@@ -169,27 +170,25 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media_cdn")
 
 
 CORS_ORIGIN_WHITELIST = (
-    'https://opendata.wenaklabs.org',
     'http://localhost:3000',
 )
 
 
-REST_FRAMEWORK = {
-    'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.AllowAny'
-    ],
-    'DEFAULT_AUTHENTICATION_CLASSES': [
-        'rest_framework_simplejwt.authentication.JWTAuthentication',
-    ],
-}
+# REST_FRAMEWORK = {
+#     'DEFAULT_PERMISSION_CLASSES': [
+#         'rest_framework.permissions.AllowAny'
+#     ],
+#     'DEFAULT_AUTHENTICATION_CLASSES': [
+#         'rest_framework_simplejwt.authentication.JWTAuthentication',
+#     ],
+# }
+
 
 SIMPLE_JWT = {
-    # "ACCESS_TOKEN_LIFETIME": timedelta(minutes=5),
-    # "REFRESH_TOKEN_LIFETIME": timedelta(days=1),
-
-    "ACCESS_TOKEN_LIFETIME": timedelta(days=30),
-    'REFRESH_TOKEN_LIFETIME': timedelta(days=30),
-    'ROTATE_REFRESH_TOKENS': True,
+    "ACCESS_TOKEN_LIFETIME": timedelta(minutes=10), # Specifies how long access tokens are valid. Typically use a lower value for higher security but more network overhead. Changing this will be useful for testing.
+    "REFRESH_TOKEN_LIFETIME": timedelta(days=1), # Specifies how long refresh tokens are valid, this corresponds to how longer a user can remain logged in while not actively refreshing their tokens. Ex: if a user closes the tab for 22 hours, on reopening, the old refresh token would still be able to fetch a valid access token, continuing their authentication. Changing this will be useful for testing.
+    "ROTATE_REFRESH_TOKENS": True, # When set to True, if a refresh token is submitted to the TokenRefreshView, a new refresh token will be returned along with the new access token. This provides a way to keep a rolling authentication while a client is open.
+    "BLACKLIST_AFTER_ROTATION": True, #
 }
 
 

@@ -1,6 +1,37 @@
-import React from 'react'
+import React, { useState } from "react";
+import axios from "axios";
+import { BASE_URL } from "../../Constant";
 
-const index = () => {
+const Contact = () => {
+    const [firstName, setFirstName] = useState('');
+    const [lastName, setLastName] = useState('');
+    const [email, setEmail] = useState('');
+    const [subject, setSubject] = useState('');
+    const [message, setMessage] = useState('');
+
+    const submit = async (e) => {
+        e.preventDefault();
+        const data = {
+            first_name: firstName,
+            last_name: lastName,
+            email: email,
+            subject: subject,
+            message: message,
+        };
+        try {
+            const response = await axios.post(BASE_URL+`contact/`, data, 
+                { headers: { 'Content-Type': 'application/json'}}
+            );
+            if (response.status === 200) {
+                alert("Message sent successfully.")
+            } else {
+                alert("Error");
+            }
+        }catch (error) {
+            alert(error)
+        } 
+    }
+
     return (
         <div>
             <section className="pt-16">
@@ -11,31 +42,37 @@ const index = () => {
                                 <h3 className="mb-2 text-3xl text-gray-900 dark:text-white">Get in touch</h3>
                                 <p className="text-gray-500 dark:text-gray-300">Start working with Jobcy that can provide everything you need to generate
                                     awareness, drive traffic, connect.</p>
-                                <form method="post" onsubmit="return validateForm()" className="mt-4 contact-form" name="myForm" id="myForm">
+                                <form className="mt-4 contact-form" onSubmit={submit}>
                                     <span id="error-msg"></span>
                                     <div className="grid grid-cols-12 gap-5">
-                                        <div className="col-span-12">
+                                        <div className="col-span-6">
                                             <div className="mb-3">
-                                                <label for="nameInput" className="text-gray-900 dark:text-gray-50">Name</label>
-                                                <input type="text" name="name" id="name" className="w-full mt-1 rounded border-gray-100/50 placeholder:text-sm placeholder:text-gray-400 dark:bg-transparent dark:border-gray-800 focus:ring-0 focus:ring-offset-0 dark:text-gray-200" placeholder="Enter your name" />
+                                                <label htmlFor="nameInput" className="text-gray-900 dark:text-gray-50">First name</label>
+                                                <input required type="text" value={firstName} onChange={e => setFirstName(e.target.value)} className="w-full mt-1 rounded border-gray-100/50 placeholder:text-sm placeholder:text-gray-400 dark:bg-transparent dark:border-gray-800 focus:ring-0 focus:ring-offset-0 dark:text-gray-200" placeholder="Enter your first name" />
+                                            </div>
+                                        </div>
+                                        <div className="col-span-6">
+                                            <div className="mb-3">
+                                                <label htmlFor="nameInput" className="text-gray-900 dark:text-gray-50">Last name</label>
+                                                <input required type="text" value={lastName} onChange={e => setLastName(e.target.value)} className="w-full mt-1 rounded border-gray-100/50 placeholder:text-sm placeholder:text-gray-400 dark:bg-transparent dark:border-gray-800 focus:ring-0 focus:ring-offset-0 dark:text-gray-200" placeholder="Enter your last name" />
                                             </div>
                                         </div>
                                         <div className="col-span-12 lg:col-span-6">
                                             <div className="mb-3">
-                                                <label for="emailInput" className="text-gray-900 dark:text-gray-50">Email</label>
-                                                <input type="email" className="w-full mt-1 rounded border-gray-100/50 placeholder:text-sm placeholder:text-gray-400 dark:bg-transparent dark:border-gray-800 focus:ring-0 focus:ring-offset-0 dark:text-gray-200" id="emaiol" name="email" placeholder="Enter your email" />
+                                                <label htmlFor="emailInput" className="text-gray-900 dark:text-gray-50">Email</label>
+                                                <input required type="email" value={email} onChange={e => setEmail(e.target.value)} className="w-full mt-1 rounded border-gray-100/50 placeholder:text-sm placeholder:text-gray-400 dark:bg-transparent dark:border-gray-800 focus:ring-0 focus:ring-offset-0 dark:text-gray-200" placeholder="Enter your email" />
                                             </div>
                                         </div>
                                         <div className="col-span-12 lg:col-span-6">
                                             <div className="mb-3">
-                                                <label for="subjectInput" className="text-gray-900 dark:text-gray-50">Subject</label>
-                                                <input type="text" className="w-full mt-1 rounded border-gray-100/50 placeholder:text-sm placeholder:text-gray-400 dark:bg-transparent dark:border-gray-800 focus:ring-0 focus:ring-offset-0 dark:text-gray-200" id="subjectInput" name="subject" placeholder="Enter your subject" />
+                                                <label htmlFor="subjectInput" className="text-gray-900 dark:text-gray-50">Subject</label>
+                                                <input required type="text" value={subject} onChange={e => setSubject(e.target.value)} className="w-full mt-1 rounded border-gray-100/50 placeholder:text-sm placeholder:text-gray-400 dark:bg-transparent dark:border-gray-800 focus:ring-0 focus:ring-offset-0 dark:text-gray-200" placeholder="Enter your subject" />
                                             </div>
                                         </div>
                                         <div className="col-span-12">
                                             <div className="mb-3">
-                                                <label for="meassageInput" className="text-gray-900 dark:text-gray-50">Your Message</label>
-                                                <textarea className="w-full mt-1 rounded border-gray-100/50 placeholder:text-sm placeholder:text-gray-400 dark:bg-transparent dark:border-gray-800 focus:ring-0 focus:ring-offset-0 dark:text-gray-200" id="meassageInput" placeholder="Enter your message" name="comments" rows="3"></textarea>
+                                                <label htmlFor="meassageInput" className="text-gray-900 dark:text-gray-50">Your Message</label>
+                                                <textarea required value={message} onChange={e => setMessage(e.target.value)} className="w-full mt-1 rounded border-gray-100/50 placeholder:text-sm placeholder:text-gray-400 dark:bg-transparent dark:border-gray-800 focus:ring-0 focus:ring-offset-0 dark:text-gray-200" placeholder="Enter your message" rows="3"></textarea>
                                             </div>
                                         </div>
                                     </div>
@@ -86,4 +123,4 @@ const index = () => {
     )
 }
 
-export default index
+export default Contact

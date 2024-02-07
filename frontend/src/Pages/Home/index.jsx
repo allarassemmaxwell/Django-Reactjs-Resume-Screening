@@ -3,7 +3,9 @@ import Header from '../../Layout/Header'
 import Footer from '../../Layout/Footer'
 import HomeContain from '../../Components/Home'
 
-const index = () => {
+
+const Home = () => {
+
     return (
         <div>
             <Header />
@@ -17,4 +19,4 @@ const index = () => {
     )
 }
 
-export default index
+export default Home
