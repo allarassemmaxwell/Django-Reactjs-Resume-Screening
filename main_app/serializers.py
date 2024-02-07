@@ -25,6 +25,7 @@ class UserSerializer(serializers.ModelSerializer):
         	"id", 
         	"first_name", 
         	"last_name", 
+			"get_full_name",
         	"email", 
         	"role",
         	"i_agree",
@@ -68,20 +69,23 @@ class UserLoginSerializer(serializers.Serializer):
 
 
 
+class RequirableBooleanField(serializers.BooleanField):
+    default_empty_html = serializers.empty
+
 
 
 
 class UserRegisterationSerializer(serializers.ModelSerializer):
-	password   = serializers.CharField(write_only=True, required=True, validators=[validate_password])
+	password = serializers.CharField(write_only=True, required=True, validators=[validate_password])
+	# i_agree  = RequirableBooleanField(required=True)
 	class Meta:
 		model  = User
 		fields = ("id", "first_name", "last_name", "email", "password")
 		extra_kwargs = {"password": {"write_only": True}}
 	# def validate(self, attrs):
 	# 	if not attrs['i_agree']:
-	# 		raise serializers.ValidationError({"i_agree": "Ce champ ne peut être vide."})
+	# 		raise serializers.ValidationError({"i_agree": "You must accept terms and conditions"})
 	# 	return attrs
-
 	def create(self, validated_data):
 		return User.objects.create_user(**validated_data)
 

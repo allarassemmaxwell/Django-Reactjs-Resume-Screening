@@ -190,15 +190,18 @@ class User(AbstractBaseUser, PermissionsMixin):
     def __str__(self):
         return self.email
 
-    def full_name(self):
-        if self.first_name or self.last_name:
-            name = self.first_name+" "+self.last_name
-        else:
-            name = "Missing name"
+    def get_full_name(self):
+        name = None
+        if self.first_name and self.last_name:
+            name = self.first_name + " "+self.last_name
+        elif self.first_name:
+            name = self.first_name
+        elif self.last_name:
+            name = self.last_name
         return name
 
     def thumbnail(self):
-        name = ''
+        name = None
         if self.photo:
             name = self.thumbnail
         return name
